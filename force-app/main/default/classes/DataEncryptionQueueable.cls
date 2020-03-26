@@ -40,8 +40,8 @@ public without sharing class DataEncryptionQueueable implements queueable{
         
             if(jobs.size() == 0){
                 System.enqueueJob(new DataEncryptionQueueable());
-                finalizer.setNeedsEnqueued(false);
             }
+            finalizer.setNeedsEnqueued(false);
         }
     }
 }
